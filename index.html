@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USCT SARL | Solutions Informatiques</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI CDN -->
+  <script>
+    tailwind.config = {
+      plugins: [daisyui],
+      daisyui: {
+        themes: ["light", "dark"]
+      }
+    }
+  </script>
 </head>
-<body>
-    
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-blue-900 text-white">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <h1 class="text-2xl font-bold">USCT <span class="text-yellow-400">SARL</span></h1>
+    <nav class="space-x-6">
+      <a href="#services" class="hover:text-yellow-400">Services</a>
+      <a href="#produits" class="hover:text-yellow-400">Produits</a>
+      <a href="#partenaires" class="hover:text-yellow-400">Partenaires</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center h-[80vh] flex items-center">
+  <div class="bg-black/50 w-full h-full flex flex-col justify-center items-center text-center text-white px-6">
+    <h2 class="text-4xl md:text-6xl font-bold">Solutions Informatiques Professionnelles</h2>
+    <p class="mt-4 text-lg md:text-2xl">Performance, fiabilité et innovation au service de votre entreprise</p>
+    <a href="#contact" class="btn btn-warning mt-6">Nous contacter</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 px-6 md:px-20">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nos domaines d’expertise</h2>
+  <div class="grid md:grid-cols-4 gap-8">
+    <div class="card bg-white shadow-xl p-6 hover:scale-105 transition-transform">
+      <h3 class="text-xl font-bold mb-2">PC & Consommables</h3>
+      <p>ACER, DELL, HP, INTEL – qualité professionnelle garantie.</p>
+    </div>
+    <div class="card bg-white shadow-xl p-6 hover:scale-105 transition-transform">
+      <h3 class="text-xl font-bold mb-2">Ordinateurs Portables</h3>
+      <p>Large gamme avec accessoires : sacs, souris, cartes mémoire.</p>
+    </div>
+    <div class="card bg-white shadow-xl p-6 hover:scale-105 transition-transform">
+      <h3 class="text-xl font-bold mb-2">Imprimantes</h3>
+      <p>HP, EPSON, SAMSUNG, BROTHER – laser & jet d’encre.</p>
+    </div>
+    <div class="card bg-white shadow-xl p-6 hover:scale-105 transition-transform">
+      <h3 class="text-xl font-bold mb-2">Accessoires</h3>
+      <p>Genius, I-Ways et bien plus encore.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUITS -->
+<section id="produits" class="py-20 bg-blue-900 text-white px-6 md:px-20">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Nos engagements</h2>
+  <p class="text-center max-w-3xl mx-auto">
+    Suivi rigoureux des commandes, livraison rapide, stock permanent et grande capacité d’approvisionnement. Nous assurons la qualité et la disponibilité optimale pour nos clients.
+  </p>
+</section>
+
+<!-- PARTENAIRES -->
+<section id="partenaires" class="py-20 px-6 md:px-20">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nos partenaires</h2>
+  <div class="flex flex-wrap justify-center gap-12 items-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" class="h-16 filter grayscale hover:grayscale-0 transition" alt="HP">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" class="h-16 filter grayscale hover:grayscale-0 transition" alt="Dell">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Acer_2011.svg" class="h-16 filter grayscale hover:grayscale-0 transition" alt="Acer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" class="h-16 filter grayscale hover:grayscale-0 transition" alt="Samsung">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Epson_logo.svg" class="h-16 filter grayscale hover:grayscale-0 transition" alt="Epson">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 md:px-20 bg-gray-100">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contactez-nous</h2>
+  <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-12">
+    <div class="space-y-4">
+      <p><strong>📍 Adresse :</strong> 769 Av. de l'Équateur, Kinshasa</p>
+      <p><strong>📞 Téléphone :</strong> 0999 910 010</p>
+      <p><strong>✉ Email :</strong> info@usctcongo.com</p>
+    </div>
+    <form id="contactForm" class="space-y-4">
+      <input type="text" placeholder="Votre nom" class="input input-bordered w-full" required />
+      <input type="email" placeholder="Votre email" class="input input-bordered w-full" required />
+      <textarea placeholder="Votre message" class="textarea textarea-bordered w-full" required></textarea>
+      <button type="submit" class="btn btn-warning w-full">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-blue-900 text-white py-6 text-center">
+  © 2025 USCT SARL — Tous droits réservés
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
